@@ -1,0 +1,210 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+   <meta charset="utf-8">
+   <title>Document - Board</title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet">
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" href="./asset/img/favicons/apple-touch-icon.png" sizes="180x180">
+   <link rel="icon" href="./asset/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+   <link rel="icon" href="./asset/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+   <link rel="stylesheet" href="./asset/css/bootstrap.min.css">
+   <link rel="stylesheet" href="./asset/css/style.css">
+</head>
+
+<body>
+   <!-- main navbar -->
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-6">
+               <div class="mobileLogo">
+                  <a href="/">
+                     <img class="img-fluid" src="./asset/img/logo.jpg" alt="">
+                  </a>
+               </div>
+            </div>
+            <div class="col-6 text-end">
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+            </div>
+         </div>
+         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="/">
+               <img src="./asset/img/logo.jpg" alt="">
+            </a>
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+               <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="/amenities.html">Amenities</a>
+               </li>
+               <li class="nav-item">
+                  <a href="/residents.html" class="nav-link">Residents</a>
+               </li>
+               <li class="nav-item">
+                  <a href="/board.html" class="nav-link active">Board</a>
+               </li>
+               <li class="nav-item">
+                  <a href="#" class="nav-link">Annual Inspection</a>
+               </li>
+            </ul>
+            <div class="searchButton">
+               <button type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                     stroke="currentColor" class="size-6">
+                     <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                  </svg>
+               </button>
+            </div>
+
+         </div>
+      </div>
+   </nav>
+   <!-- breadcome component -->
+   <div class="breadComeComponent">
+      <div class="container">
+         <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+               <li class="breadcrumb-item"><a href="/">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                           d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                     </svg>
+                     <span>Home</span>
+                  </a></li>
+               <li class="breadcrumb-item active" aria-current="page">Board</li>
+            </ol>
+         </nav>
+      </div>
+   </div>
+   <!-- section -->
+   <section class="boardSection">
+      <div class="container">
+         <div class="sectionTitle">
+            <h3>Board-Only Area</h3>
+            <p>This section is only visible to board members.</p>
+         </div>
+         <div class="cardBox">
+            <div class="row">
+               <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+                  <div class="card rounded-bottom">
+                     <img class="cardImage" src="./asset/img/board/producer.jpg" alt="">
+                     <div class="card-body">
+                        <h5 class="card-title">Board Procedures</h5>
+                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus,
+                           asperiores.</p>
+                        <a href="#" class="btn btn-primary">
+                           View Details
+                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="currentColor" class="size-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                 d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+                  <div class="card rounded-bottom">
+                     <img class="cardImage" src="./asset/img/board/request.jpg" alt="">
+                     <div class="card-body">
+                        <h5 class="card-title">Architectural Requests</h5>
+                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus,
+                           asperiores.</p>
+                        <a href="#" class="btn btn-primary">
+                           View Details
+                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="currentColor" class="size-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                 d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+                  <div class="card rounded-bottom">
+                     <img class="cardImage" src="./asset/img/board/document.jpg" alt="">
+                     <div class="card-body">
+                        <h5 class="card-title">Board-Only Documents</h5>
+                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus,
+                           asperiores.</p>
+                        <a href="#" class="btn btn-primary">
+                           View Details
+                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="currentColor" class="size-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                 d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+                  <div class="card rounded-bottom">
+                     <img class="cardImage" src="./asset/img/board/action.jpg" alt="">
+                     <div class="card-body">
+                        <h5 class="card-title">Action Items</h5>
+                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus,
+                           asperiores.</p>
+                        <a href="#" class="btn btn-primary">
+                           View Details
+                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="currentColor" class="size-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                 d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+                  <div class="card rounded-bottom">
+                     <img class="cardImage" src="./asset/img/board/discussion.jpg" alt="">
+                     <div class="card-body">
+                        <h5 class="card-title">Discussion Items</h5>
+                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus,
+                           asperiores.</p>
+                        <a href="#" class="btn btn-primary">
+                           View Details
+                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="currentColor" class="size-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                 d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+   <script src="./asset/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

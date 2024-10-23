@@ -6,490 +6,268 @@
 /*------------------------
 main code start here 
 -------------------------*/
-// for layout
-.appWrapper{
-    display: flex;
-    min-height: 100dvh;
-    .sideBar{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 280px;
-        background-color: $mainColor;
-        border-radius: 0px 30px 30px 0px;
-        max-height: 100dvh;
-        overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-        box-shadow: 8px 4px 25px rgba(0, 0, 0, 0.1);
-        height: 100%;
-        .topInfo{
-            flex: 1;
+// for navbar
+.navbar{
+    background-color: #fff !important;
+    .navbar-brand{
+        img{
+            height: 65px;
         }
-        .bottomInfo{
-            padding: 20px 10px;
-            p{
-                text-align: center;
-                font-size: 14px;
-                color: #ffffffad;
-            }
-        }
-        .logoBox{
-            padding: 30px 40px;
-            a{
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #fff;
-                padding: 5px;
-                border-radius: 100px;
-            }
-            img{
-                border-radius: 100px;
-                height: 50px;
-            }
-        }
-        .menuBox{
-            padding-left: 14px;
-            margin-top: 40px;
-            nav{
-                ul{
-                    li{
-                        margin-bottom: 10px;
-                        a{
-                            font-weight: 500;
-                            color: #fff;
-                            font-size: 16px;
-                            display: flex;
-                            align-items: center;
-                            column-gap: 5px;
-                            padding: 14px 0px;
-                            border-top-left-radius: 100px;
-                            border-bottom-left-radius: 100px;
-                            transition: 0s;
-                            padding-left: 10px;
-                            svg{
-                                height: 22px;
-                                color: #fff;
-                                min-width: 30px;
-                                text-align: center;
-                            }
-                            &:hover{
-                                color: $yellow;
-                                svg{
-                                    color: $yellow;
-                                }
-                            }
-                            &.active{
-                                background-color: #fff;
-                                border-top-left-radius: 20px;
-                                border-bottom-left-radius: 20px;
-                                position: relative;
-                                color: $titleColor;
-                                svg{
-                                    color: $yellow;
-                                }
-                                &:after{
-                                    content: "";
-                                    position: absolute;
-                                    background-color: transparent;
-                                    bottom: 100%;
-                                    right: 0;
-                                    height: 35px;
-                                    width: 35px;
-                                    border-bottom-right-radius: 18px;
-                                    box-shadow: 0 20px 0 0 #fff;
-                                }
-                                &:before{
-                                    content: "";
-                                    position: absolute;
-                                    background-color: transparent;
-                                    top: 52px;
-                                    right: 0;
-                                    height: 68px;
-                                    width: 35px;
-                                    border-top-right-radius: 18px;
-                                    box-shadow: 0 -20px 0 0 #fff;
-                                }
-                            }
-                        }
-                    }
+    }
+    .navbar-nav{
+        .nav-item{
+            margin: 0px 10px;
+            .nav-link{
+                font-weight: 600;
+                font-size: 15px;
+                padding: 10px 15px;
+                color: #918f8fd2;
+                &:hover{
+                    color: $megenda;
+                }
+                &.active{
+                    color: $megenda;
                 }
             }
         }
     }
-    .wrapper{
-        margin-left: 280px;
-        flex: 1;
-        padding: 40px 40px;
+    .searchButton{
+        button{
+            height: 40px;
+            width: 40px;
+            border-radius: 30px;
+            border: none;
+            background-color: transparent;
+            svg{
+                height: 25px;
+                color: $titleColor;
+                transition: 0.3s;
+            }
+            &:hover{
+                svg{
+                    color: $mainColor;
+                }
+            }
+        }
+        
     }
 }
 
-.pageHeading{
-    h2{
+// homeSlider
+.homeSlider{
+    margin-top: 10px;
+    .carousel{
+        width: 80%;
+        margin: 0 auto;
+        .carousel-item{
+            border-radius: 30px;
+            img{
+                border-radius: 30px;
+            }
+        }
+    }
+}
+
+.sectionTitle{
+    h3{
         font-weight: 700;
-        font-size: 28px;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: 15px;
+    }
+}
+
+// breadComeComponent
+.breadComeComponent{
+    margin-top: 10px;
+    .breadcrumb{
+        background-color: #e5e5e5b7;
+        border-radius: 10px;
+        padding: 14px 20px;
+        margin-bottom: 0px;
+        .breadcrumb-item{
+            a{
+                display: flex !important;
+                align-items: center;
+                column-gap: 6px;
+                font-weight: 500;
+                font-size: 15px;
+            }
+            svg{
+                height: 20px;
+            }
+            &.active{
+                font-weight: 500;
+            }
+        }
     }
 }
 .card{
-    border: none;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
-    border-radius: 14px;
+    height: 100%;
+    border: 1px solid $mainColor !important;
+}
+.card.rounded-bottom{
+    border-radius: 10px 10px 100px 100px !important;
+    overflow: hidden;
     .card-body{
-        padding: 15px 20px;
-    }
-}
-
-.projectButton{
-    margin-top: 20px;
-    .nav-tabs{
-        border: none;
-        display: flex;
-        column-gap: 15px;
-        row-gap: 15px;
-        flex-wrap: wrap;
-    }
-    .btn{
-        padding: 12px 25px;
-        background-color: transparent;
-        border: none;
-        border-radius: 30px;
-        font-weight: 500;
-        font-size: 15px;
-        min-width: 150px;
-        &.active{
-            background-color: #511682;
-            color: #fff;
-        }
-    }
-    .p1{
-        background-color: #51168244;
-    }
-    .p2{
-        background-color: #EEF0FF;
-    }
-    .p3{
-        background-color: #FFF7ED;
-    }
-    .p4{
-        background-color: #E6FEF0;
-    }
-    .p5{
-        background-color: #FFEFEF;
-    }
-    .p6{
-        background-color: #EEF7FE;
-    }
-    .p7{
-        background-color: #F6E4FE;
-    }
-}
-.projectPreview{
-    margin-top: 30px;
-    .topInfo{
-        border-bottom: 1px solid #e5e5e5;
-        padding-bottom: 15px;
-        h3{
-            font-weight: 600;
-            font-size: 20px;
-        }
-    }
-    .userInfo{
-        padding-top: 15px;
-        display: flex;
-        justify-content: end;
-        h4{
-            font-weight: 500;
-            font-size: 17px;
-            display: flex;
-            align-items: center;
-            column-gap: 7px;
-        }
-        svg{
-            height: 20px;
-        }
-    }
-    .card{
-        margin-top: 20px;
-        .card-body{
-            padding: 30px;
-            .top{
-                h3{
-                    font-weight: 500;
-                    font-size: 18px;
-                }
-            }
-            .itemWrapper{
-                margin-top: 10px;
-                .singleItem{
-                    background-color: $mainColor;
-                    border-radius: 10px;
-                    padding: 20px 20px;
-                    height: 100%;
-                    h4{
-                        color: #ffffffad;
-                        font-size: 14px;
-                        font-weight: 400;
-                        line-height: 20px;
-                    }
-                    h2{
-                        margin-top: 10px;
-                        color: $yellow;
-                        font-weight: 800;
-                        font-size: 35px;
-                    }
-                    .detailsBtn{
-                        margin-top: 15px;
-                        display: flex;
-                        justify-content: end;
-                        svg{
-                            margin-left: 4px;
-                            height: 17px;
-                        }
-                        a{
-                            color: #ffffffad;
-                            font-weight: 400;
-                            font-size: 14px;
-                            &:hover{
-                                color: #fff;
-                                svg{
-                                    color: #fff;
-                                }
-                            }
-                        }
-                        
-                    }
-                }
-            }
-            .bottomItemBox{
-                margin-top: 30px;
-            }
-        }
-    }
-}
-
-// mobileHeader
-.mobileHeader{
-    padding: 10px 20px;
-    background-color: $mainColor;
-    display: none;
-    .LogoBox{
-        a{
+        padding: 10px 20px 0px 20px;
+        position: relative;
+        .btn{
+            margin: 0 auto;
+            display: table;
             width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #fff;
-            padding: 5px;
-            border-radius: 100px;
-        }
-        img{
-            border-radius: 100px;
-            height: 50px;
-        }
-    }
-    .toggleButton{
-        text-align: end;
-        button{
-            height: 50px;
-            width: 50px;
-            border: none;
-            background-color: #fff;
-            border-radius: 30px;
-        }
-        svg{
-            height: 27px;
-            color: $mainColor;
-        }
-    }
-}
-
-.offcanvas{
-    background-color: $mainColor;
-    width: 300px !important;
-    border: none !important;
-    .offcanvas-header{
-        .btn-close{
-            height: 40px;
-            width: 40px;
-            background-color: #fff;
-            opacity: 1;
-            padding: 0px;
-            font-size: 13px;
-            border-radius: 30px;
-        }
-    }
-    .offcanvas-body{
-        padding: 0px;
-        display: flex;
-        flex-direction: column;
-        .topInfo{
-            flex: 1;
-        }
-        .bottomInfo{
-            padding: 20px 10px;
-            p{
-                text-align: center;
-                font-size: 14px;
-                color: #ffffffad;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $mainColor;
+            border-color: $mainColor;
+            color: $titleColor;
+            font-weight: 600;
+            font-size: 14px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 0px;
+            svg{
+                height: 16px;
+                margin-left: 4px;
+            }
+            &:hover{
+                background-color: $megenda;
+                border-color: $megenda;
+                color: #fff;
             }
         }
-        .logoBox{
-            padding: 30px 40px;
-            a{
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #fff;
-                padding: 5px;
-                border-radius: 100px;
-            }
-            img{
-                border-radius: 100px;
-                height: 50px;
-            }
+        .card-title{
+            font-weight: 600;
+            font-size: 17px;
+            margin-bottom: 3px;
         }
-        .menuBox{
-            padding-left: 14px;
-            margin-top: 40px;
-            nav{
-                ul{
-                    li{
-                        margin-bottom: 10px;
-                        a{
-                            font-weight: 500;
-                            color: #fff;
-                            font-size: 16px;
-                            display: flex;
-                            align-items: center;
-                            column-gap: 5px;
-                            padding: 14px 0px;
-                            border-top-left-radius: 100px;
-                            border-bottom-left-radius: 100px;
-                            transition: 0s;
-                            padding-left: 10px;
-                            svg{
-                                height: 22px;
-                                color: #fff;
-                                min-width: 30px;
-                                text-align: center;
-                            }
-                            &:hover{
-                                color: $yellow;
-                                svg{
-                                    color: $yellow;
-                                }
-                            }
-                            &.active{
-                                background-color: #fff;
-                                border-top-left-radius: 20px;
-                                border-bottom-left-radius: 20px;
-                                position: relative;
-                                color: $titleColor;
-                                svg{
-                                    color: $yellow;
-                                }
-                                &:after{
-                                    content: "";
-                                    position: absolute;
-                                    background-color: transparent;
-                                    bottom: 100%;
-                                    right: 0;
-                                    height: 35px;
-                                    width: 35px;
-                                    border-bottom-right-radius: 18px;
-                                    box-shadow: 0 20px 0 0 #fff;
-                                }
-                                &:before{
-                                    content: "";
-                                    position: absolute;
-                                    background-color: transparent;
-                                    top: 52px;
-                                    right: 0;
-                                    height: 68px;
-                                    width: 35px;
-                                    border-top-right-radius: 18px;
-                                    box-shadow: 0 -20px 0 0 #fff;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        .card-text{
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 40px;
         }
     }
 }
 
+.amenitiesSection{
+    padding: 20px 0px;
+    .cardBox{
+        margin-top: 20px;
+        >.row{
+            row-gap: 20px;
+        }
+        .cardImage{
+            min-height: 200px;
+        }
+    }
+}
+.residentsSection{
+    padding: 20px 0px 40px 0px;
+    .cardBox{
+        margin-top: 20px;
+        >.row{
+            row-gap: 20px;
+        }
+        .cardImage{
+            min-height: 224px;
+            max-height: 224px;
+            object-fit: cover;
+        }
+    }
+}
+
+.boardSection{
+    padding: 20px 0px 40px 0px;
+    .cardBox{
+        margin-top: 20px;
+        >.row{
+            row-gap: 20px;
+        }
+        .cardImage{
+            min-height: 220px;
+            max-height: 220px;
+        }
+    }
+}
+
+.mobileLogo{
+    display: none;
+}
+
+// for responsive
 @media (min-width: 992px) and (max-width: 1199px) {
-    .appWrapper {
-        .sideBar{
-            width: 240px;
-        }
-        .wrapper{
-            margin-left: 240px;
-            padding: 20px 20px;
-        }
-    }
-    .projectPreview .card .card-body .itemWrapper>.row{
-        row-gap: 20px;
-    }
     
 }
 @media (max-width: 991px) {
-    .mobileHeader{
+    .navbar{
+        .row{
+            width: 100%;
+            flex: 1;
+        }
+    }
+    .mobileLogo{
         display: block;
-    }
-    .appWrapper{
-        flex-direction: column;
-        .sideBar{
-            display: none;
-        }
-        .wrapper{
-            margin-left: 0px;
-            padding: 20px;
+        a{
+            img{
+                height: 50px;
+            }
         }
     }
-    .projectPreview .card .card-body .itemWrapper>.row{
-        row-gap: 20px;
+    .navbar-toggler{
+        height: 50px;
+        width: 50px;
+        padding: 0px;
+        border-radius: 30px;
+        font-size: 16px;
+        outline: none;
+        box-shadow: none;
+        &:focus{
+            outline: none !important;
+            box-shadow: none !important;
+        }
+    }
+    .navbar-brand{
+        display: none;
+    }
+    .navbar-collapse{
+        background-color: $mainColor;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+    .homeSlider .carousel {
+        width: auto;
+        max-width: 720px;
+        margin: 0 auto;
+    }
+    .navbar .navbar-nav .nav-item .nav-link {
+        text-align: center;
+    }
+    .searchButton{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10px;
     }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-    .appWrapper .wrapper {
-        padding: 15px;
-    }
-    .projectPreview .card .card-body {
-        padding: 20px;
+    .homeSlider .carousel {
+        width: auto;
+        max-width: 540px;
+        margin: 0 auto;
     }
 }
 
 @media (max-width: 575px) {
-    .appWrapper .wrapper {
-        padding: 15px;
+    .homeSlider .carousel {
+        width: auto;
+        max-width: 95%;
+        margin: 0 auto;
     }
-    .projectPreview .card .card-body {
-        padding: 20px;
-    }
-    .projectButton .btn {
-        padding: 10px 15px;
-        font-size: 14px;
-        min-width: 135px;
-    }
-    .projectButton .nav-tabs {
-        justify-content: center;
-    }
-    .pageHeading h2 {
-        font-size: 20px;
-    }
-    .projectPreview .topInfo h3 {
-        font-size: 16px;
-    }
-    .projectPreview .userInfo h4 {
-        font-size: 14px;
-        column-gap: 7px;
-    }
-    .offcanvas {
-        width: 90% !important;
+    .homeSlider .carousel .carousel-item img {
+        height: 390px;
+        object-fit: cover;
     }
 }
